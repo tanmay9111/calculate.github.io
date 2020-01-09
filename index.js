@@ -116,7 +116,7 @@ function init() {
     })
     inventory.forEach(it=>{getItem(it)});
     const skippedInv = inventory.filter(it=>skipTotals.includes(it.id))
-    $('body').find('.whole_total_wo').append(`<span class="skipped">Whole total skipping ${skippedInv.map(it=>it.name).join(', ')}: </span> <span class="sk_total total_val">0</span>`);
+    $('body').find('.whole_total_wo').append(`<span class="skipped">NSTR Value: </span> <span class="sk_total total_val">0</span>`);
 }
 
 function getItem(it) {
