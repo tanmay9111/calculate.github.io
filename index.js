@@ -1,48 +1,93 @@
 let inventory = [
     {
         id: 1,
-        name: 'Samosa',
-        factor: 0.9
+        name: 'Santoor Mega Offer',
+        factor: 35.74
     },
     {
         id: 2,
-        name: 'Chai',
-        factor: 0.8
+        name: 'Santoor 100x4',
+        factor: 83.36
     },
     {
         id: 3,
-        name: 'Dosa',
-        factor: 0.7
+        name: 'Santoor 125x4',
+        factor: 126.79
     },
     {
         id: 4,
-        name: 'Vada',
-        factor: 0.6
+        name: 'STR White 56g Single',
+        factor: 8.93
     },
     {
         id: 5,
-        name: 'Kachori',
-        factor: 0.5
+        name: 'STR White 56gx4',
+        factor: 35.74
     },
     {
         id: 6,
-        name: 'Chat',
-        factor: 0.4
+        name: 'Chandrika 75g',
+        factor: 24
     },
     {
         id: 7,
-        name: 'Namkeen',
-        factor: 1.4
+        name: 'Handwash 100ml Bottle',
+        factor: 22.73
     },
     {
         id: 8,
-        name: 'Idli',
-        factor: 11
+        name: 'Handwash 180ml Pouch',
+        factor: 100
     },
     {
         id: 9,
-        name: 'Poha',
-        factor: 2.6
+        name: 'Handwash 215ml Bottle',
+        factor: 90
+    },
+	{
+        id: 10,
+        name: 'Handwash 750ml Bottle',
+        factor: 135.45
+    },
+    {
+        id: 11,
+        name: 'GLY 50g',
+        factor: 17.89
+    },
+    {
+        id: 12,
+        name: 'GLY 75g + 33%',
+        factor: 31.11
+    },
+    {
+        id: 13,
+        name: 'Safe Wash 20g',
+        factor: 3.47
+    },
+    {
+        id: 14,
+        name: 'Safe Wash 50g',
+        factor: 8.55
+    },
+    {
+        id: 15,
+        name: 'Safe Wash 200g',
+        factor: 26.34
+    },
+    {
+        id: 16,
+        name: 'Safe Wash 500g',
+        factor: 57.61
+    },
+    {
+        id: 17,
+        name: 'Safe Wash 1kg',
+        factor: 288.07
+    },
+    {
+        id: 18,
+        name: 'Bolts Jar',
+        factor: 171.43
     }
 ]
 
