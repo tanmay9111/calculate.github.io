@@ -1,26 +1,26 @@
 let inventory = [
     {
-        id: 1,
+        id: 21,
         name: 'Santoor Mega Offer',
         factor: 35.74
     },
     {
-        id: 2,
+        id: 20,
         name: 'Santoor 100x4',
         factor: 83.36
     },
     {
-        id: 3,
+        id: 19,
         name: 'Santoor 125x4',
         factor: 126.79
     },
     {
-        id: 4,
+        id: 18,
         name: 'STR White 56g Single',
         factor: 8.93
     },
     {
-        id: 5,
+        id: 17,
         name: 'STR White 56gx4',
         factor: 35.74
     },
@@ -80,27 +80,27 @@ let inventory = [
         factor: 57.61
     },
     {
-        id: 17,
+        id: 5,
         name: 'Safe Wash 1kg',
         factor: 288.07
     },
     {
-        id: 18,
+        id: 4,
         name: 'Bolts Jar',
         factor: 171.43
     },
     {
-        id: 19,
+        id: 3,
         name: 'STR Mini',
         factor: 4.5
     },
     {
-        id: 20,
+        id: 2,
         name: 'GLS Bulb',
         factor: 8.5
     },
     {
-        id: 21,
+        id: 1,
         name: 'LED Soap Free',
         factor: 185
     }
