@@ -106,6 +106,8 @@ let inventory = [
     }
 ]
 
+let skipTotals = [1,2,3]
+
 function init() {
     inventory = inventory.sort(function(a, b){
         if(a.name < b.name) { return -1; }
@@ -113,6 +115,8 @@ function init() {
         return 0;
     })
     inventory.forEach(it=>{getItem(it)});
+    const skippedInv = inventory.filter(it=>skipTotals.includes(it.id))
+    $('body').find('.whole_total_wo').append(`<span class="skipped">Whole total skipping ${skippedInv.map(it=>it.name).join(', ')}: </span> <span class="sk_total total_val">0</span>`);
 }
 
 function getItem(it) {
@@ -133,14 +137,22 @@ function getItem(it) {
             $('body').find(`#li_${it.id}`).append(`<div class="factored_result"><b class="total_text" style="color:#0000b3">Total:</b> <span>${val}</span></div>`)
         }
         it.total = val
-        $('body').find('.whole_total').text(getTotal())
+        $('body').find('.whole_total').find('.total_val').text(getTotal())
+        $('body').find('.whole_total_wo').find('.sk_total').text(getSkipTotals())
     })
 }
 
 function getTotal() {
     let t = 0
     inventory.forEach(it=>t=t+(it.total||0))
-    return `Whole Total: ${t}`
+    return t
+}
+
+function getSkipTotals() {
+    let t = 0
+    const tempInv = inventory.filter(it=>!skipTotals.includes(it.id))
+    tempInv.forEach(item=>t=t+(item.total||0))
+    return t
 }
 
 $(document).ready(function(){

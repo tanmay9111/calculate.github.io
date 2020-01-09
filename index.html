@@ -36,8 +36,8 @@
         .total_text {
             margin-right: 16px;
         }
-        .whole_total {
-            color: red;
+        .whole_total,.whole_total_wo {
+            color: teal;
             margin-left: 50px;
             margin-top: 10px;
             margin-bottom: 10px;
@@ -45,6 +45,9 @@
             border-radius: 4px;
             padding: 6px;
             margin-right: 10px;
+        }
+        .total_val {
+            color: crimson;
         }
 
     </style>
@@ -55,7 +58,8 @@
         <h4>
             Please enter quantities for items below:
         </h4>
-        <h4 class="whole_total">Whole Total: 0</h4>
+        <h4 class="whole_total"><span>Whole Total: </span><span class="total_val"> 0</span></h4>
+        <h4 class="whole_total_wo"></h4>
         <ul id="list">
             
         </ul>
