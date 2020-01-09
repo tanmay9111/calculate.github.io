@@ -125,13 +125,22 @@ function getItem(it) {
         </li>`
     )
     $('body').find(`#quantity_${it.id}`).bind('change paste keyup', e=> {
+        const val = e.target.value * it.factor
         const quant = $('body').find(`#li_${it.id}`).find(".factored_result")
         if(quant.length) {
-            quant.find('span').text(`${e.target.value * it.factor}`)
+            quant.find('span').text(`${val}`)
         } else {
-            $('body').find(`#li_${it.id}`).append(`<div class="factored_result"><b class="total_text" style="color:#0000b3">Total:</b> <span>${e.target.value * it.factor}</span></div>`)
+            $('body').find(`#li_${it.id}`).append(`<div class="factored_result"><b class="total_text" style="color:#0000b3">Total:</b> <span>${val}</span></div>`)
         }
+        it.total = val
+        $('body').find('.whole_total').text(getTotal())
     })
+}
+
+function getTotal() {
+    let t = 0
+    inventory.forEach(it=>t=t+(it.total||0))
+    return `Whole Total: ${t}`
 }
 
 $(document).ready(function(){
