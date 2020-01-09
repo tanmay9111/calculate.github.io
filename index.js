@@ -102,19 +102,19 @@ function init() {
 
 function getItem(it) {
     $("#list").append(`
-        <li id="li_${it.name}">
-            <label for="quantity_${it.name}">
-                <div class="label_name">${it.name}</div>
-                <input name="quantity_${it.name}" id="quantity_${it.name}" type="number" placeholder="Enter Quantity here..."/>
+        <li id="li_${it.id}">
+            <label for="quantity_${it.id}">
+                <div class="label_name">${it.id}</div>
+                <input name="quantity_${it.id}" id="quantity_${it.id}" type="number" placeholder="Enter Quantity here..."/>
             </label>
         </li>`
     )
-    $('body').find(`#quantity_${it.name}`).bind('change paste keyup', e=> {
-        const quant = $('body').find(`#li_${it.name}`).find(".factored_result")
+    $('body').find(`#quantity_${it.id}`).bind('change paste keyup', e=> {
+        const quant = $('body').find(`#li_${it.id}`).find(".factored_result")
         if(quant.length) {
             quant.find('span').text(`${e.target.value * it.factor}`)
         } else {
-            $('body').find(`#li_${it.name}`).append(`<div class="factored_result"><b class="total_text" style="color:#0000b3">Total:</b> <span>${e.target.value * it.factor}</span></div>`)
+            $('body').find(`#li_${it.id}`).append(`<div class="factored_result"><b class="total_text" style="color:#0000b3">Total:</b> <span>${e.target.value * it.factor}</span></div>`)
         }
     })
 }
