@@ -104,7 +104,7 @@ function getItem(it) {
     $("#list").append(`
         <li id="li_${it.id}">
             <label for="quantity_${it.id}">
-                <div class="label_name">${it.id}</div>
+                <div class="label_name">${it.name}</div>
                 <input name="quantity_${it.id}" id="quantity_${it.id}" type="number" placeholder="Enter Quantity here..."/>
             </label>
         </li>`
