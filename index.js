@@ -88,6 +88,21 @@ let inventory = [
         id: 18,
         name: 'Bolts Jar',
         factor: 171.43
+    },
+    {
+        id: 19,
+        name: 'STR Mini',
+        factor: 4.5
+    },
+    {
+        id: 20,
+        name: 'GLS Bulb',
+        factor: 8.5
+    },
+    {
+        id: 21,
+        name: 'LED Soap Free',
+        factor: 185
     }
 ]
 
